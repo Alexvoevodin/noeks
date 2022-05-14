@@ -4,7 +4,7 @@
 @import "_global";
 
 .container{
-    width: 1200px;
+    width: 1199px;
     margin: 0 auto;
 }
 
@@ -48,10 +48,48 @@
         align-items: center;
         @include font-main(16px, $color-gray);
         &-text{
-            margin-left: 10px;
+            margin-left: 15px;
         }
         &:hover{
             color: $color-yellow;
         }
     }
+}
+
+.promo-slider{
+    height: 100vh;
+}
+
+.promo-slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    &-wrap{
+        width: 780px;
+    }
+    &__title{
+        @include font-title(48px, $color-gray-light, 700);
+        text-transform: uppercase;
+    }
+    &__text{
+        @include font-main-bold(24px, $color-gray-main);
+        margin-top: 20px;
+    }
+    &__link{
+        //display: inline-block;
+        // width: 140px;
+        // height: 46px;
+        background-color: $color-green;
+        @include font-main-bold(14px, $color-black);
+        //text-align: center;
+        padding: 15px 30px;
+    }
+}
+
+.promo-slider{
+    padding-top: 140px;
+    background-image: url("../assets/images/promo-sllider/slide-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
