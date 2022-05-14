@@ -1,0 +1,57 @@
+@import "_mixins";
+@import "_fonts";
+@import "_variables";
+@import "_global";
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+
+    &__logo{
+        display: flex;
+        align-items: center;
+
+        &-text{
+            margin-left: 14px;
+            @include font-title-secondary(36px, $color-gray, 500);
+        }
+    }
+
+    &__nav{
+        display: flex;
+        text-align: center;
+        &-menu{
+            display: flex;
+            justify-content: space-around;
+            &-link{
+                @include font-title(16px, $color-gray, 700);
+                &:hover{
+                    color: $color-yellow;
+                }
+            }
+            &-item{
+                margin: 0 20px;
+            }
+        }
+    }
+
+    &__tel{
+        display: flex;
+        align-items: center;
+        @include font-main(16px, $color-gray);
+        &-text{
+            margin-left: 10px;
+        }
+        &:hover{
+            color: $color-yellow;
+        }
+    }
+}

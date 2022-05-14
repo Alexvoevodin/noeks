@@ -1,0 +1,37 @@
+@import "_fonts";
+
+@mixin font-title($size: 36px, $color: #F2F2F2, $weight: 700) {
+  font: {
+    family: "montserrat-bold", sans-serif;
+    size: $size;
+    weight: $weight;
+  }
+  color: $color;
+}
+
+@mixin font-title-secondary($size: 36px, $color: #F2F2F2, $weight: 400) {
+  font: {
+    family: "montserrat-regular", sans-serif;
+    size: $size;
+    weight: $weight;
+  }
+  color: $color;
+}
+
+@mixin font-main($size: 18px, $color: #E5E5E5, $weight: 400) {
+  font: {
+    family: "courier-prime-regular", monospace;
+    size: $size;
+    weight: $weight;
+  }
+  color: $color;
+}
+
+@mixin font-main-bold($size: 18px, $color: #E5E5E5, $weight: 700) {
+  font: {
+    family: "courier-prime-bold", monospace;
+    size: $size;
+    weight: $weight;
+  }
+  color: $color;
+}
