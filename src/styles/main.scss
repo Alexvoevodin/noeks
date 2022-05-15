@@ -56,10 +56,6 @@
     }
 }
 
-.promo-slider{
-    height: 100vh;
-}
-
 .promo-slide{
     display: flex;
     flex-direction: column;
@@ -76,13 +72,22 @@
         margin-top: 20px;
     }
     &__link{
-        //display: inline-block;
-        // width: 140px;
-        // height: 46px;
+        margin-top: 60px;
+        margin-right: 10px;
+        display: inline-block;
+        min-width: 220px;
+        text-align: center;
         background-color: $color-green;
         @include font-main-bold(14px, $color-black);
-        //text-align: center;
+        text-transform: uppercase;
         padding: 15px 30px;
+        border-radius: 3px;
+        &:last-child{
+            background-color: $color-yellow;
+        }
+        &:hover{
+            transform: scale(1.05);
+        }
     }
 }
 
@@ -92,4 +97,58 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    height: 100vh;
+    &__wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__nav{
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__dot{
+        cursor: pointer;
+        display: inline-block;
+        width: 36px;
+        height: 5px;
+        background-color: $color-gray-dark;
+        border-radius: 100px;
+        margin-right: 10px;
+        &--active{
+            background-color: $color-yellow;
+            cursor: default;
+        }
+    }
+
+    &__arrows{
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+        &-wrap{
+            margin-right: 50px;
+        }
+    }
+    &__arrow{
+        cursor: pointer;
+        display: inline-block;
+        width: 53px;
+        height: 12px;
+        margin: 0 30px;
+        text-align: center;
+        // &:last-child{
+        //     transform: rotate(180deg);
+        // }
+        &:hover{
+            svg path{
+                stroke: $color-yellow;
+            }
+        }
+    }
+    &__counter{
+        @include font-title-secondary(24px, $color-gray-light, 400);
+        word-spacing: 25px;
+    }
 }
