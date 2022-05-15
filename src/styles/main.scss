@@ -57,7 +57,18 @@
 }
 
 .promo-slide{
-    display: flex;
+    &--active{
+        position: static;
+        transform: translateX(0);
+        //opacity: 1;
+        display: flex;
+        transition: all 1s ease-in-out;
+    }
+    //opacity: 0;
+    //display: none;
+    transition: all 1s ease-in-out;
+    position: absolute;
+    transform: translateX(5000px);
     flex-direction: column;
     justify-content: left;
     &-wrap{
@@ -150,5 +161,8 @@
     &__counter{
         @include font-title-secondary(24px, $color-gray-light, 400);
         word-spacing: 25px;
+        &-wrap{
+            min-width: 200px;
+        }
     }
 }

@@ -9,6 +9,10 @@
 	transition: all .4s ease;
 }
 
+body{
+	overflow-x: hidden;
+}
+
 .main {
 	max-width: 1920px;
 	margin: 0 auto;
