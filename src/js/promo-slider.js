@@ -5,6 +5,7 @@ const navigationArrows = document.querySelectorAll(".promo-slider__arrow");
 
 let currentSliderNumber = document.getElementById("promo-slider-current-number")
 let activeSlide = document.getElementsByClassName("promo-slide--active");
+let activeSlideDot = document.getElementsByClassName("promo-slider__dot--active");
 
 navigationArrows.forEach(element => {
 	element.addEventListener("click", function (e) {
@@ -13,28 +14,46 @@ navigationArrows.forEach(element => {
 
 		if (arrow === "promo-slider__arrow-right") {
 			let slideId = activeSlide[0].id.charAt(activeSlide[0].id.length - 1);
-			console.log("Slide ID: " + slideId)
+			console.log("Slide ID: " + slideId);
+
 			if (slideId === "4") {
 				slideId = "0";
 			}
+
 			const nextSlide = document.getElementById(`promo-slide-${Number(slideId) + 1}`);
+			const nextSlideDot = document.getElementById(`promo-slider__dot-${Number(slideId) + 1}`);
+
 			console.log("Next slide: " + nextSlide.id);
+			console.log("Next slideDot: " + nextSlideDot.id);
+
 			currentSliderNumber.innerHTML = `0${Number(slideId) + 1}`;
 			activeSlide[0].classList.remove("promo-slide--active");
 			nextSlide.classList.add("promo-slide--active");
+
+			activeSlideDot[0].classList.remove("promo-slider__dot--active");
+			nextSlideDot.classList.add("promo-slider__dot--active");
 		}
 
 		if (arrow === "promo-slider__arrow-left") {
 			let slideId = activeSlide[0].id.charAt(activeSlide[0].id.length - 1);
-			console.log("Slide ID: " + slideId)
+			console.log("Slide ID: " + slideId);
+
 			if (slideId === "1") {
 				slideId = "5";
 			}
+
 			const nextSlide = document.getElementById(`promo-slide-${Number(slideId) - 1}`);
+			const nextSlideDot = document.getElementById(`promo-slider__dot-${Number(slideId) - 1}`);
+
 			console.log("Next slide: " + nextSlide.id);
+			console.log("Next slideDot: " + nextSlideDot.id);
+
 			currentSliderNumber.innerHTML = `0${Number(slideId) - 1}`;
 			activeSlide[0].classList.remove("promo-slide--active");
 			nextSlide.classList.add("promo-slide--active");
+
+			activeSlideDot[0].classList.remove("promo-slider__dot--active");
+			nextSlideDot.classList.add("promo-slider__dot--active");
 		}
 	});
 });
