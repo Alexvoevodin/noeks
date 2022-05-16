@@ -1,0 +1,11 @@
+import "./styles/main.scss";
+import "./js/promo-slider.js"
+import "./assets/images/header/logo.svg";
+import "./assets/images/header/phone-call.svg";
+import "./assets/images/promo-sllider/slide-1.jpg";
+import "./assets/images/promo-sllider/slide-2.jpg";
+import "./assets/images/promo-sllider/slide-3.jpg";
+import "./assets/images/promo-sllider/slide-4.jpg";
+import "./assets/images/promo-sllider/slide-4.jpg";
+import "./assets/images/promo-sllider/slider-arrow.svg";
+import "./assets/images/promo-sllider/slider-arrow-right.svg";
