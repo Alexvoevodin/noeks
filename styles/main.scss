@@ -81,6 +81,11 @@
     &__text{
         @include font-main-bold(24px, $color-gray-main);
         margin-top: 20px;
+        span{
+            display: flex;
+            align-self: flex-end;
+            color: $color-yellow;
+        }
     }
     &__link{
         margin-top: 60px;
@@ -105,6 +110,7 @@
 .promo-slider{
     padding-top: 140px;
     background-image: url("../assets/images/promo-sllider/slide-1.jpg");
+    transition: all 1s ease-in-out;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
