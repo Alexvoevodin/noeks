@@ -33,8 +33,8 @@ navigationArrows.forEach(element => {
 			activeSlideDot[0].classList.remove("promo-slider__dot--active");
 			nextSlideDot.classList.add("promo-slider__dot--active");
 
-			const element = document.querySelector(".promo-slider");
-			element.style = `background-image: url("../assets/images/promo-sllider/slide-${Number(slideId) + 1}.jpg");`;
+			// const element = document.querySelector(".promo-slider"); TODO need to fix
+			// element.style = `background-image: url("@assets/images/promo-sllider/slide-${Number(slideId) + 1}.jpg");`;
 		}
 
 		if (arrow === "promo-slider__arrow-left") {
@@ -58,8 +58,8 @@ navigationArrows.forEach(element => {
 			activeSlideDot[0].classList.remove("promo-slider__dot--active");
 			nextSlideDot.classList.add("promo-slider__dot--active");
 
-			const element = document.querySelector(".promo-slider");
-			element.style = `background-image: url("../assets/images/promo-sllider/slide-${Number(slideId) - 1}.jpg");`;
+			// const element = document.querySelector(".promo-slider"); TODO
+			// element.style = `background-image: url("@assets/images/promo-sllider/slide-${Number(slideId) - 1}.jpg");`;
 		}
 	});
 });
@@ -78,7 +78,7 @@ promoSliderDotsContainer.addEventListener("click", function (e) {
 		activeSlide[0].classList.remove("promo-slide--active");
 		promoSlides[targetID - 1].classList.add("promo-slide--active");
 
-		const element = document.querySelector(".promo-slider");
-		element.style = `background-image: url("../assets/images/promo-sllider/slide-${Number(targetID)}.jpg");`
+		// const element = document.querySelector(".promo-slider"); TODO
+		// element.style = `background-image: url("@assets/images/promo-sllider/slide-${Number(targetID)}.jpg");`;
 	}
 });
