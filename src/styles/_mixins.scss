@@ -1,4 +1,5 @@
 @import "_fonts";
+@import "_variables";
 
 @mixin font-title($size: 36px, $color: #F2F2F2, $weight: 700) {
   font: {

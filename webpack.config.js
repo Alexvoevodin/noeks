@@ -1,5 +1,6 @@
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const PATH = require("path");
 
 let mode = process.env.NODE_ENV;
 console.info("MODE: " + mode);
@@ -13,8 +14,9 @@ module.exports = {
 		},
 	},
 	output: {
+		path: PATH.resolve(__dirname, "dist"),
 		filename: "[name][fullhash].js",
-		assetModuleFilename: "assets/[hash][ext]",
+		assetModuleFilename: "[path][name][ext]",//TODO need to fix - in prod build src directopry is no need
 		clean: true,
 	},
 	devServer: {
@@ -31,8 +33,8 @@ module.exports = {
 			template: "./src/index.html"
 		}),
 		new MiniCssExtractPlugin({
-			filename: '[name].[hash:8].css',
-			chunkFilename: '[id].[hash:8].css',
+			filename: '[name].[fullhash].css',
+			chunkFilename: '[id].[fullhash].css',
 		}),
 	],
 	module: {
