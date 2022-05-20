@@ -16,7 +16,7 @@ module.exports = {
 	output: {
 		path: PATH.resolve(__dirname, "dist"),
 		filename: "[name][fullhash].js",
-		assetModuleFilename: "[path][name][ext]",//TODO need to fix - in prod build src directopry is no need
+		assetModuleFilename: "[path][name][ext]",//TODO need to fix - try src/[path]...
 		clean: true,
 	},
 	devServer: {
